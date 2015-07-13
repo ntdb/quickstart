@@ -1,0 +1,30 @@
+{
+  "name": "scaffold",
+  "version": "0.0.1",
+  "description": "A scaffold for creative front end web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scaffold",
+    "gulp",
+    "sass",
+    "es6",
+    "babel"
+  ],
+  "author": "Nate Bailey",
+  "license": "ISC",
+  "dependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.15.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
