@@ -1,12 +1,15 @@
-var React = require("react");
-var App = require("./scripts/app");
-require("./styles/main");
+const React = require('react');
+const App = require('./scripts/app');
+require('./styles/main');
 
-var Root = React.createClass({
-  displayName: "Root",
-  render: function() {
+class Root extends React.Component {
+  render() {
     return <App />;
   }
-});
+  constructor(props) {
+    super(props);
+    this.displayName = 'Root';
+  }
+}
 
-React.render(<Root />, document.getElementById("react-root"));
+React.render(<Root />, document.getElementById('react-root'));

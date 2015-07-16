@@ -1,8 +1,13 @@
-var React = require("react");
+const React = require('react');
 
-module.exports = React.createClass({
-  displayName: "App",
-  render: function() {
+class App extends React.Component {
+  render() {
     return <div>Hello World!</div>;
   }
-});
+  constructor(props) {
+    super(props);
+    this.displayName = 'App';
+  }
+}
+
+module.exports = App;
