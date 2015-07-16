@@ -12,24 +12,36 @@ module.exports = {
     publicPath: "/static/",
     filename: "bundle.js"
   },
-  devServer: {
-    hot: true,
-    inline: true,
-    noInfo: true,
-    contentBase: "build/"
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [
-      { test: /\.jsx$/, loaders: ["react-hot", "babel"] },
+      {
+        test: /\.jsx$/,
+        loaders: ["react-hot", "babel"],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.jsx$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      },
       {
         test: /\.sass$/,
-        loader: "style!css!sass?indentedSyntax",
+        loaders: [
+          "style-loader",
+          "css-loader",
+          "autoprefixer-loader?browsers=last 2 version",
+          "sass-loader?indentedSyntax"
+        ],
         include: path.join(__dirname, "source/styles")
       }
     ]
+  },
+  resolve: {
+    root: path.join(__dirname, "source"),
+    extensions: ["", ".js", ".jsx", ".sass"]
   }
 };
