@@ -5,7 +5,7 @@ module.exports = {
   entry: [
     "webpack-dev-server/client?http://0.0.0.0:3000",
     "webpack/hot/only-dev-server",
-    "./app/entry.jsx"
+    "./source/entry.jsx"
   ],
   output: {
     path: path.join(__dirname, "build"),
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.sass$/,
         loader: "style!css!sass?indentedSyntax",
-        include: path.join(__dirname, "app")
+        include: path.join(__dirname, "source/styles")
       }
     ]
   }
