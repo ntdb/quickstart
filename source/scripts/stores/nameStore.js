@@ -3,7 +3,7 @@ const NameActions = require('../actions/nameActions');
 
 class NameStore {
   constructor() {
-    this.names = ['Boom'];
+    this.names = [];
     this.bindListeners({
       handleAddName: NameActions.ADD_NAME,
       handleRemoveName: NameActions.REMOVE_NAME
@@ -16,7 +16,7 @@ class NameStore {
 
   handleRemoveName(name) {
     const nameIndex = this.names.indexOf(name);
-    this.names.slice(nameIndex, 1);
+    this.names.splice(nameIndex, 1);
   }
 }
 

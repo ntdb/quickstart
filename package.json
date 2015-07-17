@@ -10,9 +10,14 @@
   "keywords": [
     "scaffold",
     "react",
+    "flux",
+    "alt",
     "sass",
     "es6",
-    "babel"
+    "babel",
+    "webpack",
+    "autoprefixer",
+    "eslint"
   ],
   "author": "Nate Bailey",
   "license": "ISC",
