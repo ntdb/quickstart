@@ -1,8 +1,10 @@
 const React = require('react');
+const NameList = require('./components/nameList');
+require('../styles/main');
 
 class App extends React.Component {
   render() {
-    return <div>Hello World!</div>;
+    return <NameList />;
   }
   constructor(props) {
     super(props);
@@ -10,4 +12,4 @@ class App extends React.Component {
   }
 }
 
-module.exports = App;
+React.render(<App />, document.getElementById('react-root'));

@@ -9,7 +9,7 @@
   },
   "keywords": [
     "scaffold",
-    "gulp",
+    "react",
     "sass",
     "es6",
     "babel"
@@ -17,6 +17,7 @@
   "author": "Nate Bailey",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.17.1",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "webpack": "^1.10.1"

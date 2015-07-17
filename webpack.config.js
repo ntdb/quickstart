@@ -1,16 +1,16 @@
-var path = require("path");
-var webpack = require("webpack");
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    "webpack-dev-server/client?http://0.0.0.0:3000",
-    "webpack/hot/only-dev-server",
-    "./source/entry.jsx"
+    'webpack-dev-server/client?http://0.0.0.0:3000',
+    'webpack/hot/only-dev-server',
+    './source/scripts/app.jsx'
   ],
   output: {
-    path: path.join(__dirname, "build"),
-    publicPath: "/static/",
-    filename: "bundle.js"
+    path: path.join(__dirname, 'build'),
+    publicPath: '/static/',
+    filename: 'bundle.js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -19,29 +19,29 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx$/,
-        loaders: ["react-hot", "babel"],
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel'],
         exclude: /node_modules/
       },
       {
-        test: /\.jsx$/,
-        loader: "eslint-loader",
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
         exclude: /node_modules/
       },
       {
         test: /\.sass$/,
         loaders: [
-          "style-loader",
-          "css-loader",
-          "autoprefixer-loader?browsers=last 2 version",
-          "sass-loader?indentedSyntax"
+          'style-loader',
+          'css-loader',
+          'autoprefixer-loader?browsers=last 2 version',
+          'sass-loader?indentedSyntax'
         ],
-        include: path.join(__dirname, "source/styles")
+        include: path.join(__dirname, 'source/styles')
       }
     ]
   },
   resolve: {
-    root: path.join(__dirname, "source"),
-    extensions: ["", ".js", ".jsx", ".sass"]
+    root: path.join(__dirname, 'source'),
+    extensions: ['', '.js', '.jsx', '.sass']
   }
 };
