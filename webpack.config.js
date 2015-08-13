@@ -43,5 +43,6 @@ module.exports = {
   resolve: {
     root: path.join(__dirname, 'source'),
     extensions: ['', '.js', '.jsx', '.sass']
-  }
+  },
+  devtool: "#inline-source-map"
 };
