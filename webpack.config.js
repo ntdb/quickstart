@@ -29,12 +29,13 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.sass$/,
+        test: /\.scss$/,
         loaders: [
+          'scss-lint-loader',
           'style-loader',
           'css-loader',
           'autoprefixer-loader?browsers=last 2 version',
-          'sass-loader?indentedSyntax'
+          'sass-loader'
         ],
         include: path.join(__dirname, 'source/styles')
       }
@@ -42,7 +43,7 @@ module.exports = {
   },
   resolve: {
     root: path.join(__dirname, 'source'),
-    extensions: ['', '.js', '.jsx', '.sass']
+    extensions: ['', '.js', '.jsx', '.scss']
   },
   devtool: "#inline-source-map"
 };

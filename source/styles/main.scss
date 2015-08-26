@@ -1,0 +1,24 @@
+$teal: #008080;
+
+body {
+  color: $teal;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+a {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
