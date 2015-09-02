@@ -3,12 +3,12 @@ const NameList = require('./components/nameList');
 require('../styles/main');
 
 class App extends React.Component {
-  render() {
-    return <NameList />;
-  }
   constructor(props) {
     super(props);
     this.displayName = 'App';
+  }
+  render() {
+    return <NameList />;
   }
 }
 

@@ -13,6 +13,7 @@
     "flux",
     "alt",
     "sass",
+    "scss",
     "es6",
     "babel",
     "webpack",
@@ -23,6 +24,8 @@
   "license": "ISC",
   "dependencies": {
     "alt": "^0.17.1",
+    "jsonp": "^0.2.0",
+    "lodash": "^3.10.1",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "webpack": "^1.10.1"
@@ -30,18 +33,21 @@
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel-core": "^5.6.20",
-    "babel-eslint": "^3.1.23",
+    "babel-eslint": "^4.1.1",
     "babel-loader": "^5.3.1",
-    "css-loader": "^0.15.3",
-    "eslint": "^0.24.1",
-    "eslint-loader": "^0.14.1",
-    "eslint-plugin-react": "^2.7.1",
+    "css-loader": "^0.17.0",
+    "eslint": "^1.3.1",
+    "eslint-config-airbnb": "0.0.8",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.3.1",
     "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
     "node-sass": "^3.2.0",
     "react-hot-loader": "^1.2.8",
-    "sass-loader": "^1.0.2",
+    "sass-loader": "^2.0.1",
     "scss-lint-loader": "^1.0.1",
     "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
     "webpack-dev-server": "^1.10.1"
   }
 }

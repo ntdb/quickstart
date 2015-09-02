@@ -3,6 +3,12 @@ const NameStore = require('../stores/nameStore');
 const NameActions = require('../actions/nameActions');
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.displayName = 'App';
+    this.state = NameStore.getState();
+    this.onChange = this.onChange.bind(this);
+  }
   componentDidMount() {
     NameStore.listen(this.onChange);
   }
@@ -11,6 +17,13 @@ class App extends React.Component {
   }
   onChange(state) {
     this.setState(state);
+  }
+  removeName(name) {
+    NameActions.removeName(name);
+  }
+  addName() {
+    const random = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    NameActions.addName(random);
   }
   render() {
     const names = this.state.names.map(name =>
@@ -23,19 +36,6 @@ class App extends React.Component {
         <a onClick={this.addName}>Add Name</a>
       </div>
     );
-  }
-  removeName(name) {
-    NameActions.removeName(name);
-  }
-  addName() {
-    const random = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-    NameActions.addName(random);
-  }
-  constructor(props) {
-    super(props);
-    this.displayName = 'App';
-    this.state = NameStore.getState();
-    this.onChange = this.onChange.bind(this);
   }
 }
 
