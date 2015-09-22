@@ -23,6 +23,7 @@ module.exports = {
     })
   ],
   module: {
+    preLoaders: Common.preLoaders,
     loaders: Common.loaders
   },
   resolve: Common.resolve,
