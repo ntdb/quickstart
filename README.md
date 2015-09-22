@@ -7,4 +7,5 @@ Frontend scaffold: Webpack, Babel, Sass, React, Alt, ESLint
 * `npm start`
 
 ## Build
-* `webpack -p`
+* Set ['output']['publicPath'] to your deployment URL in webpack-production.config.js
+* npm run build
