@@ -10,8 +10,8 @@ module.exports = {
     './source/scripts/app.jsx'
   ],
   output: {
-    path: path.join(__dirname, 'build'),
-    publicPath: '/static/',
+    path: path.join(__dirname, 'public'),
+    publicPath: '/assets/',
     filename: 'bundle.js'
   },
   plugins: [
