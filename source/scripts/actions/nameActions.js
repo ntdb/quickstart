@@ -1,12 +1,9 @@
-const alt = require('../alt');
+import * as types from '../constants/ActionTypes';
 
-class NameActions {
-  addName(name) {
-    this.dispatch(name);
-  }
-  removeName(name) {
-    this.dispatch(name);
-  }
+export function addName(name) {
+  return { type: types.ADD_NAME, name };
 }
 
-module.exports = alt.createActions(NameActions);
+export function deleteName(name) {
+  return { type: types.DELETE_NAME, name };
+}

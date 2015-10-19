@@ -6,21 +6,25 @@ var path = require('path');
 module.exports = {
   preLoaders: [
     {
-      test: /\.jsx?$/,
+      test: /\.js$/,
       loader: 'eslint-loader',
-      exclude: /node_modules/
+      include: path.join(__dirname, 'source/scripts')
+    },
+    {
+      test: /\.scss$/,
+      loader: 'scss-lint-loader',
+      include: path.join(__dirname, 'source/styles')
     },
   ],
   loaders: [
     {
-      test: /\.jsx?$/,
+      test: /\.js$/,
       loaders: ['react-hot', 'babel'],
-      exclude: /node_modules/
+      include: path.join(__dirname, 'source/scripts')
     },
     {
       test: /\.scss$/,
       loaders: [
-        'scss-lint-loader',
         'style-loader',
         'css-loader',
         'autoprefixer-loader?browsers=last 2 version',
@@ -42,6 +46,6 @@ module.exports = {
   ],
   resolve: {
     root: path.join(__dirname, 'source'),
-    extensions: ['', '.js', '.jsx', '.scss', '.css', '.png', '.jpg', '.jpeg', '.svg', '.woff', '.otf', '.ttf']
+    extensions: ['', '.js', '.scss', '.css', '.png', '.jpg', '.jpeg', '.svg', '.woff', '.otf', '.ttf']
   }
 };

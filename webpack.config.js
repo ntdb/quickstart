@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000',
     'webpack/hot/only-dev-server',
-    './source/scripts/app.jsx'
+    './source/scripts'
   ],
   output: {
     path: path.join(__dirname, 'public'),
@@ -27,5 +27,5 @@ module.exports = {
     loaders: Common.loaders
   },
   resolve: Common.resolve,
-  devtool: "#inline-source-map"
+  devtool: '#inline-source-map'
 };

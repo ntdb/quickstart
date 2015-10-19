@@ -4,7 +4,7 @@ var Common = require('./webpack-common.config');
 
 module.exports = {
   entry: [
-    './source/scripts/app.jsx'
+    './source/scripts'
   ],
   output: {
     path: path.join(__dirname, 'public/assets/'),
