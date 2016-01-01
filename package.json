@@ -1,6 +1,6 @@
 {
   "name": "scaffold",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A scaffold for creative front end web development",
   "main": "index.js",
   "scripts": {

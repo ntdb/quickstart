@@ -1,5 +1,5 @@
 # QuickStart
-Frontend scaffold: Webpack, Babel, Sass, React, Alt, ESLint
+Frontend scaffold: Webpack, Babel, Sass, React, Redux, ESLint
 
 ## Develop
 * `npm install`
