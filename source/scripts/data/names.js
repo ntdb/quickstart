@@ -1,7 +1,11 @@
-import { ADD_NAME, DELETE_NAME } from '../constants/ActionTypes';
+// ACTION TYPES
+const ADD_NAME = 'ADD_NAME';
+const DELETE_NAME = 'DELETE_NAME';
 
+// STATE
 const initialState = [];
 
+// REDUCER
 export default function names(state = initialState, action) {
   switch (action.type) {
   case ADD_NAME:
@@ -11,4 +15,13 @@ export default function names(state = initialState, action) {
   default:
     return state;
   }
+}
+
+// ACTIONS
+export function addName(name) {
+  return { type: ADD_NAME, name };
+}
+
+export function deleteName(name) {
+  return { type: DELETE_NAME, name };
 }

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import NameList from '../components/nameList';
-import * as NameActions from '../actions/nameActions';
+import * as NameActions from '../data/names';
 
 class App extends Component {
   render() {
