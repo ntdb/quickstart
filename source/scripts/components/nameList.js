@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
 class NameList extends Component {
+  static propTypes = {
+    names: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired
+  }
   constructor(props, context) {
     super(props, context);
     this.displayName = 'NameList';
@@ -25,10 +29,5 @@ class NameList extends Component {
     );
   }
 }
-
-NameList.propTypes = {
-  names: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
-};
 
 export default NameList;

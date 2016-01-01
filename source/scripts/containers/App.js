@@ -5,30 +5,21 @@ import NameList from '../components/nameList';
 import * as NameActions from '../data/names';
 
 class App extends Component {
+  static propTypes = {
+    names: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired
+  }
   render() {
     const { names, actions } = this.props;
     return <NameList names={names} actions={actions} />;
   }
 }
 
-App.propTypes = {
-  names: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
-};
-
-function mapStateToProps(state) {
-  return {
-    names: state.names,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(NameActions, dispatch)
-  };
-}
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  (state) => ({
+    names: state.names,
+  }),
+  (dispatch) => ({
+    actions: bindActionCreators(NameActions, dispatch)
+  })
 )(App);
