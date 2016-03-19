@@ -11,6 +11,9 @@ Frontend scaffold: Webpack, Babel, Sass, React, Redux, ESLint
 * `npm install -g webpack-dev-server`
 * `npm start`
 
+## Test
+* `npm test`
+
 ## Build
 * Set `['output']['publicPath']` to your deployment URL in `webpack-production.config.js`
 * npm run build

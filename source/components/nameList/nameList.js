@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import Name from '../name/Name';
+
+import styles from './NameList.scss';
 
 class NameList extends Component {
   static propTypes = {
@@ -9,22 +12,17 @@ class NameList extends Component {
     super(props, context);
     this.displayName = 'NameList';
   }
-  removeName(name) {
-    this.props.actions.deleteName(name);
-  }
-  addName() {
+  addName = () => {
     const random = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
     this.props.actions.addName(random);
   }
   render() {
-    const { names } = this.props;
+    const { names, actions } = this.props;
     return (
       <div>
-        <h3>Names!</h3>
-        {names.map(name =>
-          <p key={name}>{name} <a onClick={this.removeName.bind(this, name)}>(remove)</a></p>
-        )}
-        <a onClick={this.addName.bind(this)}>Add Name</a>
+        <h3 className={styles.header}>Names!</h3>
+        {names.map(name => <Name key={name} name={name} actions={actions} />)}
+        <a onClick={this.addName}>Add Name</a>
       </div>
     );
   }

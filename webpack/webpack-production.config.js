@@ -4,10 +4,10 @@ var Common = require('./webpack-common.config');
 
 module.exports = {
   entry: [
-    './source/scripts'
+    './source'
   ],
   output: {
-    path: path.join(__dirname, 'public/assets/'),
+    path: path.join(__dirname, '../public/assets/'),
     publicPath: '/',
     filename: 'bundle.js'
   },

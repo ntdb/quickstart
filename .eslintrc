@@ -1,11 +1,13 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
   "rules": {
     "comma-dangle": 0,
-    'no-unused-vars': [2, {     // http://eslint.org/docs/rules/no-unused-vars
-      'vars': 'local',
-      'args': 'after-used',
-      'argsIgnorePattern': '^_'
-    }]
+    "no-unused-vars": [2, {     // http://eslint.org/docs/rules/no-unused-vars
+      "vars": "local",
+      "args": "after-used",
+      "argsIgnorePattern": "^_"
+    }],
+    "react/prefer-stateless-function": 0 // this is annoying in a boilerplate
   }
 }

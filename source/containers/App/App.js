@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import NameList from '../components/nameList';
-import * as NameActions from '../data/names';
+import NameList from '../../components/nameList/NameList';
+import * as NameActions from '../../data/names';
+
+import './App.scss';
 
 class App extends Component {
   static propTypes = {
