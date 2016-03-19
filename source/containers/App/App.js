@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import NameList from '../../components/nameList/NameList';
@@ -6,16 +6,15 @@ import * as NameActions from '../../data/names';
 
 import './App.scss';
 
-class App extends Component {
-  static propTypes = {
-    names: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
-  }
-  render() {
-    const { names, actions } = this.props;
-    return <NameList names={names} actions={actions} />;
-  }
-}
+const App = (props) => {
+  const { names, actions } = props;
+  return <NameList names={names} actions={actions} />;
+};
+
+App.propTypes = {
+  names: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
+};
 
 export default connect(
   (state) => ({
