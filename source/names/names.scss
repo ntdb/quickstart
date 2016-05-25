@@ -1,3 +1,7 @@
+@import '../shared/styles/variables';
+
 .header {
-  color: red;
+  composes: header from '../shared/styles/typography';
+  composes: uppercase from '../shared/styles/typography';
+  color: $pumpkin;
 }
