@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack -p --config webpack/webpack-production.config.js",
-    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 babel-tape-runner tests/**/*.js | faucet"
+    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 babel-tape-runner source/**/*.spec.js | faucet"
   },
   "keywords": [
     "scaffold",

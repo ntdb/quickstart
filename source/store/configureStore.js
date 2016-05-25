@@ -5,8 +5,8 @@ export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState);
 
   if (module.hot) {
-    module.hot.accept('./data/reducer', () => {
-      const nextReducer = require('./data/reducer');
+    module.hot.accept('./reducer', () => {
+      const nextReducer = require('./reducer');
       store.replaceReducer(nextReducer);
     });
   }
