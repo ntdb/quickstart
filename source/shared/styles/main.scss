@@ -1,7 +1,8 @@
-$teal: #008080;
+@import "variables";
 
 body {
   color: $teal;
+  font-family: helvetica, sans-serif;
   line-height: 1.2;
 }
 

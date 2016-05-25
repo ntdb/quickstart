@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import App from './app/app.container';
 import configureStore from './store/configureStore';
 
-import './index.scss';
+import './shared/styles/main.scss';
 
 const store = configureStore();
 

@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var styleLintPlugin = require('stylelint-webpack-plugin');
 var Common = require('./webpack-common.config');
 
 module.exports = {
@@ -15,6 +16,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new styleLintPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new WebpackNotifierPlugin(),

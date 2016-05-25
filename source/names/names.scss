@@ -1,7 +1,8 @@
-@import '../shared/styles/variables';
+@import "../shared/styles/variables";
 
 .header {
-  composes: header from '../shared/styles/typography';
-  composes: uppercase from '../shared/styles/typography';
+  composes: header from "../shared/styles/typography";
+  composes: uppercase from "../shared/styles/typography";
+  font-family: helvetica;
   color: $pumpkin;
 }
