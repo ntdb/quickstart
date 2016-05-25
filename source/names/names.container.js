@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import Name from '../name/Name';
+import Name from './name';
 
-import styles from './NameList.scss';
+import styles from './names.scss';
 
 class NameList extends Component {
   static propTypes = {
